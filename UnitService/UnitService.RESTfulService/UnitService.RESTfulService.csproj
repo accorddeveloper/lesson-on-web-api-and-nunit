@@ -123,6 +123,10 @@
       <Project>{e52f34db-344f-478b-a145-35567c70eb04}</Project>
       <Name>UnitService.DependencyInjection</Name>
     </ProjectReference>
+    <ProjectReference Include="..\UnitService.Logic\UnitService.Logic.csproj">
+      <Project>{1ED9E16B-3319-40BE-93CA-70682BFB542B}</Project>
+      <Name>UnitService.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

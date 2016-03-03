@@ -1,10 +1,14 @@
 ﻿namespace UnitService.DependencyInjection
 {
+    using System.Reflection;
+
     using Autofac;
+    using Autofac.Integration.WebApi;
 
     using Data.Database;
     using Data.Repositories;
 
+    using UnitService.Logic.Directors;
     using UnitService.Logic.Mappers;
 
     /// <summary>
@@ -34,6 +38,8 @@
                 builder.RegisterType<UnitServiceContext>().As<IUnitServiceContext>();
                 builder.RegisterType<PersonMapper>().As<IPersonMapper>();
                 builder.RegisterType<UnitMapper>().As<IUnitMapper>();
+                builder.RegisterType<GetUnitsDirector>().As<IGetUnitsDirector>();
+                builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
                 container = builder.Build();
                 return container;
             }

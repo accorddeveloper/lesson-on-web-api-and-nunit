@@ -58,6 +58,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\UnitsRepositoryTests\GetAllUnitsWithPeople.cs" />
+    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnits.cs" />
     <Compile Include="Logic\Mappers\PersonMapperTests\MapPerson.cs" />
     <Compile Include="Logic\Mappers\UnitMapperTests\MapUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -74,6 +75,10 @@
     <ProjectReference Include="..\UnitService.Logic\UnitService.Logic.csproj">
       <Project>{1ed9e16b-3319-40be-93ca-70682bfb542b}</Project>
       <Name>UnitService.Logic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\UnitService.RESTfulService\UnitService.RESTfulService.csproj">
+      <Project>{0bc23150-b464-4a7d-93eb-6dd9cf625d2b}</Project>
+      <Name>UnitService.RESTfulService</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

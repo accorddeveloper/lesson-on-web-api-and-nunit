@@ -18,6 +18,12 @@
         private PersonDto dto;
 
         [OneTimeSetUp]
+        public void Run()
+        {
+            this.Arrange();
+            this.Act();
+        }
+
         public void Arrange()
         {
             person = new Person
@@ -28,8 +34,6 @@
             };
 
             mapper = new PersonMapper();
-
-            this.Act();
         }
 
         public void Act()

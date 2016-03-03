@@ -31,6 +31,12 @@
         private Person secondPerson;
 
         [OneTimeSetUp]
+        public void Run()
+        {
+            this.Arrange();
+            this.Act();
+        }
+
         public void Arrange()
         {
             person = new Person();
@@ -47,8 +53,6 @@
 
             this.personMapper.Map(this.person).Returns(this.personDto);
             this.personMapper.Map(this.secondPerson).Returns(this.secondPersonDto);
-
-            this.Act();
         }
 
         public void Act()
