@@ -54,13 +54,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Domain\PersonDto.cs" />
-    <Compile Include="Domain\Titles.cs" />
     <Compile Include="Domain\UnitDto.cs" />
+    <Compile Include="Mappers\IPersonMapper.cs" />
+    <Compile Include="Mappers\IUnitMapper.cs" />
+    <Compile Include="Mappers\PersonMapper.cs" />
+    <Compile Include="Mappers\UnitMapper.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\UnitService.Data\UnitService.Data.csproj">
+      <Project>{D97CA563-E9DE-4DCE-92B1-563F88320A8F}</Project>
+      <Name>UnitService.Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

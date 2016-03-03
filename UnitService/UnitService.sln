@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitService.RESTfulService"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitService.Data", "UnitService.Data\UnitService.Data.csproj", "{D97CA563-E9DE-4DCE-92B1-563F88320A8F}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitService.DependencyInjection", "UnitService.DependencyInjection\UnitService.DependencyInjection.csproj", "{E52F34DB-344F-478B-A145-35567C70EB04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{D97CA563-E9DE-4DCE-92B1-563F88320A8F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D97CA563-E9DE-4DCE-92B1-563F88320A8F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D97CA563-E9DE-4DCE-92B1-563F88320A8F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E52F34DB-344F-478B-A145-35567C70EB04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E52F34DB-344F-478B-A145-35567C70EB04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E52F34DB-344F-478B-A145-35567C70EB04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E52F34DB-344F-478B-A145-35567C70EB04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
