@@ -4,11 +4,12 @@
 
     using Logic.Directors;
 
-    public class UnitController : ApiController
+    [RoutePrefix("api")]
+    public class UnitsController : ApiController
     {
         private readonly IGetUnitsDirector getUnitsDirector;
 
-        public UnitController(IGetUnitsDirector getUnitsDirector)
+        public UnitsController(IGetUnitsDirector getUnitsDirector)
         {
             this.getUnitsDirector = getUnitsDirector;
         }

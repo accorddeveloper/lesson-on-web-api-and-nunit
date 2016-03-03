@@ -18,6 +18,6 @@
         public IEnumerable<Unit> GetAllUnitsWithPeople()
         {
             return this.context.Units.Include(u => u.People).ToArray();
-        }  
+        }
     }
 }

@@ -25,6 +25,12 @@
         private Person person;
 
         [OneTimeSetUp]
+        public void Run()
+        {
+            this.Arrange();
+            this.Act();
+        }
+
         public void Arrange()
         {
             person = new Person();

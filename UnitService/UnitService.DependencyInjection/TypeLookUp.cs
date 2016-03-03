@@ -39,7 +39,7 @@
                 builder.RegisterType<PersonMapper>().As<IPersonMapper>();
                 builder.RegisterType<UnitMapper>().As<IUnitMapper>();
                 builder.RegisterType<GetUnitsDirector>().As<IGetUnitsDirector>();
-                builder.RegisterApiControllers(Assembly.GetExecutingAssembly());
+                builder.RegisterApiControllers(Assembly.GetCallingAssembly());
                 container = builder.Build();
                 return container;
             }
