@@ -17,7 +17,7 @@
 
         public IEnumerable<Unit> GetAllUnitsWithPeople()
         {
-            return this.context.Units.Include(u => u.People).ToArray();
+            return this.context.Units.Include(u => u.People).OrderBy(a => a.Name).ToArray();
         }
     }
 }
