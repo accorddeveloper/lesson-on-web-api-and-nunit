@@ -15,11 +15,9 @@
         private readonly IGetUnitsDirector getUnitsDirector;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="UnitsController"/> class. 
+        /// Initializes a new instance of the <see cref="UnitsController"/> class.
         /// </summary>
-        /// <param name="getUnitsDirector">
-        /// The director responsible for getting all the units.
-        /// </param>
+        /// <param name="getUnitsDirector">The director responsible for getting all the units.</param>
         public UnitsController(IGetUnitsDirector getUnitsDirector)
         {
             this.getUnitsDirector = getUnitsDirector;
@@ -28,7 +26,7 @@
         /// <summary>
         /// Gets all the units.
         /// </summary>
-        /// <returns><see cref="UnitDto"/>Collection of UnitDtos</returns>
+        /// <returns><see cref="UnitDto"/> Collection of UnitDtos</returns>
         [Route("units")]
         public IHttpActionResult GetAll()
         {
@@ -38,12 +36,8 @@
         /// <summary>
         /// Gets one of the units by reference name.
         /// </summary>
-        /// <param name="reference">
-        /// The reference name of the unit.
-        /// </param>
-        /// <returns>
-        /// <see cref="UnitDto"/>The selected UnitDto
-        /// </returns>
+        /// <param name="reference">The reference name of the unit.</param>
+        /// <returns><see cref="UnitDto"/> The selected UnitDto</returns>
         [Route("units/{reference}")]
         public IHttpActionResult GetByReference([FromUri]string reference)
         {

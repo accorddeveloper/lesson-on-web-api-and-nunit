@@ -1,6 +1,5 @@
 ﻿namespace UnitService.UnitTests.Data.UnitsRepositoryTests
 {
-    using System.Collections.Generic;
     using System.Collections.ObjectModel;
     using System.Linq;
 
@@ -19,7 +18,7 @@
         private Unit unit;
 
         private Unit unit1;
-        
+
         private Unit unit2;
 
         private Person person;
@@ -35,8 +34,8 @@
         {
             person = new Person();
 
-            unit1 = new Unit { People = new Collection<Person>(), Name = "Unit 0"};
-            unit2 = new Unit { People = new Collection<Person>(), Name = "Unit 1"};
+            unit1 = new Unit { People = new Collection<Person>(), Name = "Unit 0" };
+            unit2 = new Unit { People = new Collection<Person>(), Name = "Unit 1" };
 
             unit2.People.Add(person);
 
@@ -64,7 +63,7 @@
         {
             Assert.That(this.unit.People.First(), Is.EqualTo(this.person));
         }
-        
+
         [OneTimeTearDown]
         public void TearDown()
         {

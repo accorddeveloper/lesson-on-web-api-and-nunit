@@ -1,6 +1,5 @@
 ﻿namespace UnitService.UnitTests.Service.UnitsControllers
 {
-    using System.Collections.Generic;
     using System.Web.Http;
     using System.Web.Http.Results;
 

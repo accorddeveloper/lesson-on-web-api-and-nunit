@@ -1,6 +1,5 @@
 ﻿namespace UnitService.UnitTests.Service.UnitsControllers
 {
-    using System.Collections.Generic;
     using System.Web.Http;
     using System.Web.Http.Results;
 
@@ -11,7 +10,6 @@
     using RESTfulService.Controllers;
 
     using UnitService.Logic.Directors;
-    using UnitService.Logic.Domain;
 
     [TestFixture]
     public class GetUnitByReferenceNotFound
