@@ -69,11 +69,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Data\UnitsRepositoryTests\GetUnitByName.cs" />
     <Compile Include="Data\UnitsRepositoryTests\GetAllUnitsWithPeople.cs" />
+    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByNameNotFound.cs" />
+    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByName.cs" />
     <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnits.cs" />
     <Compile Include="Logic\Mappers\PersonMapperTests\MapPerson.cs" />
     <Compile Include="Logic\Mappers\UnitMapperTests\MapUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\UnitsControllers\GetUnitByReferenceNotFound.cs" />
+    <Compile Include="Service\UnitsControllers\GetUnitByReference.cs" />
     <Compile Include="Service\UnitsControllers\GetAll.cs" />
   </ItemGroup>
   <ItemGroup>

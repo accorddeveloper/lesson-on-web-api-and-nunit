@@ -7,5 +7,7 @@
     public interface IUnitsRepository
     {
         IEnumerable<Unit> GetAllUnitsWithPeople();
+
+        Unit GetUnitByName(string name);
     }
 }

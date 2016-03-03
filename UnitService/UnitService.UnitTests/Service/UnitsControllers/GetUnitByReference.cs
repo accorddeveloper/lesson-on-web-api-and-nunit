@@ -14,8 +14,9 @@
     using UnitService.Logic.Domain;
 
     [TestFixture]
-    public class GetAll
+    public class GetUnitByReference
     {
+        private const string ReferenceName = "Test";
         private UnitsController controller;
 
         private IHttpActionResult result;
@@ -30,18 +31,19 @@
         public void Arrange()
         {
             var director = Substitute.For<IGetUnitsDirector>();
+            director.GetUnitByReference(ReferenceName).Returns(new UnitDto());
             controller = new UnitsController(director);
         }
 
         public void Act()
         {
-            this.result = this.controller.GetAll();
+            this.result = this.controller.GetByReference(ReferenceName);
         }
 
         [Test]
-        public void AssertResultCollectionOfUnitDto()
+        public void AssertResultUnitDto()
         {
-            var type = typeof(OkNegotiatedContentResult<IEnumerable<UnitDto>>);
+            var type = typeof(OkNegotiatedContentResult<UnitDto>);
             Assert.That(this.result, Is.TypeOf(type));
         }
     }

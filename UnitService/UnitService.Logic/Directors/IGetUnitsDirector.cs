@@ -7,5 +7,7 @@
     public interface IGetUnitsDirector
     {
         IEnumerable<UnitDto> GetUnits();
+
+        UnitDto GetUnitByReference(string reference);
     }
 }

@@ -24,5 +24,11 @@
             var units = this.repository.GetAllUnitsWithPeople();
             return units.Select(entity => this.mapper.Map(entity));
         }
+
+        public UnitDto GetUnitByReference(string reference)
+        {
+            var entity = this.repository.GetUnitByName(reference);
+            return entity != null ? this.mapper.Map(entity) : null;
+        }
     }
 }

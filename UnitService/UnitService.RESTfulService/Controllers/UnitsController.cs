@@ -34,5 +34,21 @@
         {
             return this.Ok(this.getUnitsDirector.GetUnits());
         }
+
+        /// <summary>
+        /// Gets one of the units by reference name.
+        /// </summary>
+        /// <param name="reference">
+        /// The reference name of the unit.
+        /// </param>
+        /// <returns>
+        /// <see cref="UnitDto"/>The selected UnitDto
+        /// </returns>
+        [Route("units/{reference}")]
+        public IHttpActionResult GetByReference([FromUri]string reference)
+        {
+            var model = this.getUnitsDirector.GetUnitByReference(reference);
+            return model == null ? (IHttpActionResult)this.NotFound() : this.Ok(model);
+        }
     }
 }
