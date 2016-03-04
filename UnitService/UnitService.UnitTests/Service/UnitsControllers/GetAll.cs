@@ -13,7 +13,7 @@
     using UnitService.Logic.Directors;
     using UnitService.Logic.Domain;
 
-    [TestFixture]
+    [TestFixture(Category = "Service")]
     public class GetAll
     {
         private UnitsController controller;

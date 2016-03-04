@@ -8,7 +8,7 @@
     using UnitService.Data.Database;
     using UnitService.Data.Repositories;
 
-    [TestFixture]
+    [TestFixture(Category = "Data")]
     public class GetUnitByName
     {
         private FakeUnitServiceContext context;

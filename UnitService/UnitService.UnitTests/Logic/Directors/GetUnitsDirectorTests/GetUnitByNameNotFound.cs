@@ -13,7 +13,7 @@
     using UnitService.Logic.Domain;
     using UnitService.Logic.Mappers;
 
-    [TestFixture]
+    [TestFixture(Category = "Directors")]
     public class GetUnitByNameNotFound
     {
         private const string UnitName = "Test";

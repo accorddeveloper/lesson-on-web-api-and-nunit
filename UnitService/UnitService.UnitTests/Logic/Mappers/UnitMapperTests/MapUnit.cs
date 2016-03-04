@@ -11,7 +11,7 @@
     using UnitService.Logic.Domain;
     using UnitService.Logic.Mappers;
 
-    [TestFixture]
+    [TestFixture(Category = "Mappers")]
     public class MapUnit
     {
         private Unit unit;

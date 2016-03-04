@@ -11,7 +11,7 @@
 
     using UnitService.Logic.Directors;
 
-    [TestFixture]
+    [TestFixture(Category = "Service")]
     public class GetUnitByReferenceNotFound
     {
         private const string ReferenceName = "Test";

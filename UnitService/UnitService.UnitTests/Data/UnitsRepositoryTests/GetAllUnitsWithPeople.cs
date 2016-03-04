@@ -9,7 +9,7 @@
     using UnitService.Data.Database;
     using UnitService.Data.Repositories;
 
-    [TestFixture]
+    [TestFixture(Category = "Data")]
     public class GetAllUnitsWithPeople
     {
         private FakeUnitServiceContext context;
