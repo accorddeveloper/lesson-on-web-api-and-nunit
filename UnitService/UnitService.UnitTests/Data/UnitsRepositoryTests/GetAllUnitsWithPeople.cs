@@ -74,7 +74,7 @@
         [Test]
         public void AssertNoPersonIsPresentInUnitTwo()
         {
-            Assert.IsEmpty(units.Skip(1).First().People);
+            Assert.That(units.Skip(1).First().People, Is.Empty);
         }
 
         [OneTimeTearDown]

@@ -75,6 +75,7 @@
     <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByName.cs" />
     <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnits.cs" />
     <Compile Include="Logic\Mappers\PersonMapperTests\MapPerson.cs" />
+    <Compile Include="Logic\Mappers\UnitMapperTests\MapUnitWithNoPeople.cs" />
     <Compile Include="Logic\Mappers\UnitMapperTests\MapUnit.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\UnitsControllers\GetUnitByReferenceNotFound.cs" />

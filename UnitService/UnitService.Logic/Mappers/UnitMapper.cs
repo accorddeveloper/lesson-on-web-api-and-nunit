@@ -18,7 +18,7 @@
         {
             var dto = new UnitDto { Reference = entity.Name, People = new Collection<PersonDto>() };
 
-            if (entity.People == null)
+            if (entity.People == null || entity.People.Count == 0)
             {
                 return dto;
             }
