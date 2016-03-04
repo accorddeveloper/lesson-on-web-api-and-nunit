@@ -52,7 +52,7 @@
         }
 
         [Test]
-        public void AssertPersonMapperWasntInvokeOnEmptyCollection()
+        public void AssertPersonMapperWasntInvokedOnEmptyCollection()
         {
             this.personMapper.DidNotReceive().Map(Arg.Any<Person>());
         }
