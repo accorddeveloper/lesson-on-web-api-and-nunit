@@ -33,23 +33,23 @@
 
         public void Arrange()
         {
-            person = new Person();
-
             unit1 = new Unit { People = new Collection<Person>() };
             unit2 = new Unit { People = new Collection<Person>() };
 
+            this.person = new Person();
             unit1.People.Add(person);
 
             context = new FakeUnitServiceContext();
             this.context.Units.Add(unit1);
             this.context.Units.Add(unit2);
 
+            repository = new UnitsRepository(this.context);
+
             this.Act();
         }
 
         public void Act()
         {
-            repository = new UnitsRepository(this.context);
             units = this.repository.GetAllUnitsWithPeople();
         }
 

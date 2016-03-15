@@ -71,8 +71,8 @@
   <ItemGroup>
     <Compile Include="Data\UnitsRepositoryTests\GetUnitByName.cs" />
     <Compile Include="Data\UnitsRepositoryTests\GetAllUnitsWithPeople.cs" />
-    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByNameNotFound.cs" />
-    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByName.cs" />
+    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByReferenceNotFound.cs" />
+    <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnitByReference.cs" />
     <Compile Include="Logic\Directors\GetUnitsDirectorTests\GetUnits.cs" />
     <Compile Include="Logic\Mappers\PersonMapperTests\MapPerson.cs" />
     <Compile Include="Logic\Mappers\UnitMapperTests\MapUnitWithNoPeople.cs" />

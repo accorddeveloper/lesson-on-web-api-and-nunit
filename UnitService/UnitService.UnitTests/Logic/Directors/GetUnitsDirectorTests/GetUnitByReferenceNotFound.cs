@@ -1,6 +1,10 @@
 ﻿namespace UnitService.UnitTests.Logic.Directors.GetUnitsDirectorTests
 {
+    using System;
+
     using NSubstitute;
+    using NSubstitute.ExceptionExtensions;
+    using NSubstitute.ReturnsExtensions;
 
     using NUnit.Framework;
 
@@ -11,17 +15,13 @@
     using UnitService.Logic.Mappers;
 
     [TestFixture(Category = "Directors")]
-    public class GetUnitByName
+    public class GetUnitByReferenceNotFound
     {
         private const string UnitName = "Test";
 
         private GetUnitsDirector director;
 
-        private UnitDto unitDto;
-
         private UnitDto result;
-
-        private Unit unit;
 
         [OneTimeSetUp]
         public void Run()
@@ -35,11 +35,8 @@
             var mapper = Substitute.For<IUnitMapper>();
             var repository = Substitute.For<IUnitsRepository>();
 
-            unit = new Unit();
-            repository.GetUnitByName(UnitName).Returns(this.unit);
-
-            this.unitDto = new UnitDto();
-            mapper.Map(this.unit).Returns(this.unitDto);
+            repository.GetUnitByName(UnitName).ReturnsNull();
+            mapper.Map(null).Throws(new NullReferenceException());
 
             director = new GetUnitsDirector(mapper, repository);
         }
@@ -50,9 +47,9 @@
         }
 
         [Test]
-        public void AssertSelectedUnitDto()
+        public void AssertSelectedUnitIsNull()
         {
-            Assert.That(this.result, Is.EqualTo(this.unitDto));
+            Assert.That(this.result, Is.Null);
         }
     }
 }

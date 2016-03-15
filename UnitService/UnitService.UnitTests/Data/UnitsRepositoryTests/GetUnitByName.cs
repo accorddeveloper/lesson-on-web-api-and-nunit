@@ -43,12 +43,13 @@
             this.context.Units.Add(unit1);
             this.context.Units.Add(unit2);
 
+            repository = new UnitsRepository(this.context);
+
             this.Act();
         }
 
         public void Act()
         {
-            repository = new UnitsRepository(this.context);
             this.unit = this.repository.GetUnitByName("Unit 1");
         }
 
